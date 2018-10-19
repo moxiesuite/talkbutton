@@ -1,0 +1,54 @@
+.TalkPage {
+  display: flex;
+  flex-wrap: nowrap;
+
+  .mic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 80%;
+    width: 100%;
+
+    background-color: hsl(0, 0%, 29%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 10vw;
+    
+    
+    &.taken {
+      background-color: hsl(348, 100%, 61%);
+      color: white;
+      font-size: 5vw;
+    }
+
+    &.owner {
+      background-color: hsl(141, 71%, 48%);
+      color: white;
+      font-size: 5vw;
+      height: 100%;
+      z-index: 10;
+    }
+  }
+
+  .dropmic {
+    width: 20vw;
+    height: 20vw;
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    right: 3vw;
+    bottom: 3vw; 
+    border-radius: 50%;
+    background-color: hsl(348, 100%, 61%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15vw;
+    transform: rotate(45deg);
+    cursor: pointer;
+  }
+}
