@@ -45,6 +45,10 @@ if (channel == "/") {
   channel = "/index";
 }
 
+if (channel[channel.length - 1] == "/") {
+  channel = channel.substring(0, channel.length - 1);
+}
+
 store.dispatch(ChannelActions.setChannel(channel))
 
 const render = () => {

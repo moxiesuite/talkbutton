@@ -6,16 +6,15 @@ const http = require('http');
 var app = express();
 
 app.use("/", express.static('dist'))
+app.use("*", express.static('dist'))
 
 // Start your app.
-app.listen(3000, "0.0.0.0", async err => {
+app.listen(3000, "127.0.0.1", async err => {
   if (err) {
     return console.log(err);
   }
   console.log("Server started...");
 });
-
-
 
 var wsserver = http.createServer(),
 bayeux = new faye.NodeAdapter({mount: '/__connect', timeout: 45});
